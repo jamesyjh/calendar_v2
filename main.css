@@ -1,0 +1,144 @@
+/**
+ * 
+ AUTHOR: James Hong (yjh0205@gmail.com)
+ DATE CREATED: 2020-05-26
+
+ DESCRIPTION:
+    Style Sheet for index.html of Assignment01-JamesHong.
+ *
+
+├── index.html              // Default page
+├── main.css                // Base Styles. Available globally in the application
+├── preview.png             // Screenshot of application 
+├── readme.md               // Contains general information about this project
+└── scripts
+    ├── Calendar.js         // Model class defining the properties of a calendar and accessor methods
+    ├── Logger.js           // Debugging tool rendered at the bottom of the browser  
+    └── main.js             // Uses Calendar class to dynamically update the static HTML content
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Raleway&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.monthYear-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: left;
+  justify-content: center;
+  justify-items: flex-start;
+  height: 4vw;
+  padding: 0 5em 0 5em;
+}
+
+.monthBtn {
+  align-self: flex-start;
+}
+
+.monthBtn button {
+  padding: 0 0 0 0;
+  border: none;
+  background: none;
+}
+
+.monthBtn button:hover {
+  background-color: rgb(144, 255, 255);
+  border-radius: 100%;
+}
+
+.monthBtn button:focus {
+  outline: none;
+}
+
+.monthBtn button:active {
+  background-color: rgb(144, 255, 255);
+  box-shadow: 0 2px rgb(255, 255, 255);
+  transform: translateY(1px);
+}
+
+.monthBtn img {
+  height: 2.5vw;
+}
+
+#monthYear {
+  align-self: flex-start;
+  font-size: calc(1em + 2vw);
+  font-weight: 500;
+}
+
+.gridParent-dayOfWeek {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 10px;
+  font-family: "work Sans", sans-serif;
+}
+
+/* Reducing screen size will display shorter length days of the week */
+@media screen and (min-width: 768px) {
+  #dayOfWeek-short {
+    display: none;
+  }
+}
+
+.gridItem-day {
+  font-size: calc(0.5em + 1vw);
+  text-align: center;
+  font-weight: 300px;
+  padding: 5px 0 0 5px;
+  height: 10vw;
+  min-height: 40px;
+  max-height: 40px;
+  background-color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  #dayOfWeek-full {
+    display: none;
+  }
+
+  .gridItem-day {
+    font-size: calc(0.5em + 1.5vw);
+    min-height: 30px;
+    max-height: 30px;
+  }
+}
+
+.gridParent-dateOfMonth {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 10px;
+}
+
+.gridItem {
+  font-size: 13px;
+  padding: 5px 0 0 5px;
+  height: 7.5vw;
+  min-height: 50px;
+  max-height: 100px;
+}
+
+#previousMonth {
+  background-color: #d8d8d8;
+}
+
+#currentMonth {
+  font-size: 16px;
+  background-color: #ececec;
+}
+
+#nextMonth {
+  background-color: #d8d8d8;
+}
+
+#today {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #b8c5ff;
+}

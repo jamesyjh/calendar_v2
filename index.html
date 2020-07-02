@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    
+
+ AUTHOR: James Hong (yjh0205@gmail.com)
+ DATE CREATED: 2020-05-26
+ 
+ Assignment01_JamesHong
+
+
+ DESCRIPTION:
+    Write a web application to display your own version of monthly calendar of the current month only, and highlight
+    today with a different colour.
+    
+-->
+
+  <head>
+    <title>Assignment02_JamesHong</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5"
+    />
+    <meta name="author" content="James Hong" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://www.songho.ca/js/Logger.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/Calendar.js"></script>
+  </head>
+
+  <body>
+    <div class="monthYear-container">
+      <div class="monthBtn">
+        <button id="prevBtn"><img src="prev.svg" /></button>
+        <button id="nextBtn"><img src="next.svg" /></button>
+      </div>
+      <div id="monthYear"></div>
+    </div>
+
+    <div class="gridParent-dayOfWeek" id="dayOfWeek-full">
+      <div class="gridItem-day">Sunday</div>
+      <div class="gridItem-day">Monday</div>
+      <div class="gridItem-day">Tuesday</div>
+      <div class="gridItem-day">Wednesday</div>
+      <div class="gridItem-day">Thursday</div>
+      <div class="gridItem-day">Friday</div>
+      <div class="gridItem-day">Saturday</div>
+    </div>
+    <div class="gridParent-dayOfWeek" id="dayOfWeek-short">
+      <div class="gridItem-day">Sun</div>
+      <div class="gridItem-day">Mon</div>
+      <div class="gridItem-day">Tue</div>
+      <div class="gridItem-day">Wed</div>
+      <div class="gridItem-day">Thu</div>
+      <div class="gridItem-day">Fri</div>
+      <div class="gridItem-day">Sat</div>
+    </div>
+    <div class="gridParent-dateOfMonth" id="dateOfMonth">
+      <!-- dynamically generated content -->
+    </div>
+  </body>
+</html>
